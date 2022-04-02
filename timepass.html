@@ -1,0 +1,117 @@
+<!-- IN this video we are goinh to create a landing page as shown here -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Landing page</title>
+</head>
+<style type="text/css">
+	body
+	{
+		cursor: not-allowed;
+	}
+	#close
+	{
+		opacity: 0;
+		transition: 0.7s;
+		height: 0px;
+		position: relative;
+		margin-top: 30px;
+
+	}
+	#open
+	{
+		opacity: 1;
+		transition: 0.7s;
+		position: relative;
+		margin-top: 30px;
+
+
+	}
+	div:hover #close{
+		opacity: 1;
+		height: auto;
+
+	}
+		div:hover #open{
+		opacity: 0;
+		height: 0px;
+
+	}
+			div:hover #teeth{
+	animation: anima 1s ease-in-out 1;
+
+	}
+	#specs
+	{
+	position: absolute;top: 0px;left: 0px;
+	z-index: -1;
+		
+	}
+	#teeth
+	{
+		
+        position: absolute;
+		left:50%;
+		transform: translateX(-50%) scale(0.9);
+		bottom: 0px;
+		width: 70%;
+		z-index: 5;
+
+
+
+	}
+	#mask
+	{
+		z-index: 20;
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+	}
+
+				div:hover #mask{
+					transition: 0.8s;
+	left: -100%;
+
+	}
+
+					div:hover #cap{
+					transition: 0.8s;
+	top: -100%;
+
+	}
+
+
+	#cap
+	{
+		position: absolute;
+		top: -50px;
+		left: 50%;
+		transform: translateX(-50%);
+		height: 200px;
+
+	}
+
+	@keyframes anima
+	{
+		0%{
+			transform: translateX(-50%) scale(0.8);
+		}
+		100%{
+			transform: translateX(-50%) scale(0.9);
+		}
+
+	}
+</style>
+<body>
+	<div>
+<img id="open" src="https://cdn.pixabay.com/photo/2020/04/20/08/27/eyes-5067140__340.png">
+<img id="close" src="https://cdn.pixabay.com/photo/2020/11/09/12/56/eyes-5726595__340.png">
+<img src="https://cdn.pixabay.com/photo/2013/07/13/09/49/dental-hygiene-156103__340.png" width="100%" id="teeth">
+<img src="https://cdn.pixabay.com/photo/2014/04/03/09/57/groucho-marx-309396__340.png" width="100%" id="specs">
+<img src="https://cdn.pixabay.com/photo/2020/09/21/18/55/face-mask-5590978__340.png" id="mask" width="100%" height="400px">
+<img src="https://cdn.pixabay.com/photo/2013/07/13/12/13/hat-159431__340.png" width="100%" id="cap">
+</div>
+</body>
+</html>
